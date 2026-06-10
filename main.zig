@@ -19,4 +19,4 @@ test "Array sorting" {
     const randomArray: u16 = comptime std.Random.array(rand, u16);
     sortArray();
     try std.testing.expect(true);
-};
+}
