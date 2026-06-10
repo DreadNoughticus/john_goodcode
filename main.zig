@@ -5,5 +5,5 @@ pub fn main() !void {
 }
 
 test "test" {
-    try expect(true);
+    try std.testing.expect(true);
 }
