@@ -13,11 +13,11 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     const test_step = b.step("test", "Running the test suite");
-    for (test_targets) |target| {
+    for (test_targets) |test_target| {
         const unit_tests = b.addTest(.{
             .root_module = b.createModule(.{
                 .root_source_file = b.path("main.zig"),
-                .target = b.resolveTargetQuery(target),
+                .target = b.resolveTargetQuery(test_target),
             }),
         });
         const run_unit_tests = b.addRunArtifact(unit_tests);
