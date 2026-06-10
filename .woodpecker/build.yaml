@@ -4,19 +4,19 @@ when:
 
 steps:
   - name: format
-    image: ziglang/zig
+    image: ziglings/ziglang
     commands:
       - echo "Formatting code"
       - zig fmt .
 
   - name: test
-    image: ziglang/zig
+    image: ziglings/ziglang
     commands:
       - echo "Running tests"
       - zig build test
 
   - name: build
-    image: ziglang/zig
+    image: ziglings/ziglang
     commands:
       - echo "Starting build"
       - zig build
