@@ -2,7 +2,7 @@ const std = @import("std");
 
 var prng: std.Random.DefaultPrng = .init(blk: {
     var seed: u64 = undefined;
-    try std.posix.getrandom(std.mem.asBytes(&seed));
+    std.posix.getrandom(std.mem.asBytes(&seed));
     break :blk seed;
 });
 const rand = prng.random();
@@ -16,7 +16,7 @@ fn sortArray() !void {
 }
 
 test "Array sorting" {
-    const randomArray: u16 = comptime std.Random.array(rand, u16);
-    sortArray();
+    const randomArray: u16 = comptime std.Random.array(rand, u16, usize);
+    std.debug.print(randomArray)
     try std.testing.expect(true);
 }
