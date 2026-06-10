@@ -9,14 +9,14 @@ steps:
       - echo "Formatting code"
       - zig fmt .
 
-  - name: test
-    image: ziglings/ziglang
-    commands:
-      - echo "Running tests"
-      - zig build test
-
   - name: build
     image: ziglings/ziglang
     commands:
       - echo "Starting build"
       - zig build
+
+  - name: test
+    image: ziglings/ziglang
+    commands:
+      - echo "Running tests"
+      - zig build test
