@@ -1,0 +1,2 @@
+# JOHN CLEANCODE
+My school took away my compilers, so now i have to learn to develop apps and have everything run on a ci pipeline, while never touching the app. this is my test for creating a clean codebase with rigorous testing.
