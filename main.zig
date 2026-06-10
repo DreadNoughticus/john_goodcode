@@ -9,11 +9,11 @@ const rand = prng.random();
 
 pub fn main() !void {
     std.debug.print("Hello World!\n", .{});
-};
+}
 
 fn sortArray() !void {
-    std.debug.print("Coming soon", .{})
-};
+    std.debug.print("Coming soon", .{});
+}
 
 test "Array sorting" {
     const randomArray: u16 = comptime std.Random.array(rand, u16)
