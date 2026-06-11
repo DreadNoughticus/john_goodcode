@@ -7,7 +7,7 @@ on:
 
 jobs:
   zig-ci:
-    runs-on: ubuntu-latest-1cpu
+    runs-on: ubuntu-latest
     container:
       image: ziglings/ziglang
 
