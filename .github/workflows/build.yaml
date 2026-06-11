@@ -9,19 +9,18 @@ jobs:
   zig-ci:
     runs-on: ubuntu-latest
     steps:
-      - name: Install zig
-        run: |
-          curl https://www.zvm.app/install.sh
-          source /home/runner/.bashrc
-          zvm i master
-
       - name: Check out repo code
         uses: actions/checkout@v4
+
+      - name: Install zig
+        uses: mlugg/setup-zig@v2
+        with:
+          version: master
 
       - name: format
         run: |
           echo "Formatting code"
-          zig fmt .
+          zig fmt --check .
 
       - name: test
         run: |
