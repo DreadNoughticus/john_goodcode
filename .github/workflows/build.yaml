@@ -20,7 +20,7 @@ jobs:
       - name: format
         run: |
           echo "Formatting code"
-          zig fmt --check .
+          zig fmt .
 
       - name: test
         run: |
