@@ -2,12 +2,12 @@ when:
   - event: push
     branch: main
 
-steps:
-  - name: format
-    image: ziglings/ziglang
-    commands:
-      - echo "Formatting code"
-      - zig fmt .
+# steps:
+#   - name: format
+#     image: ziglings/ziglang
+#     commands:
+#       - echo "Formatting code"
+#       - zig fmt .
 
   - name: test
     image: ziglings/ziglang
