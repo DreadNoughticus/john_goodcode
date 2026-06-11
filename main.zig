@@ -16,7 +16,7 @@ fn sortArray() !void {
 }
 
 test "Array sorting" {
-    const randomArray: [64]u16 = std.Random.array(rand, u16, 64);
+    const randomArray: [64]u8 = std.Random.array(rand, u16, 8);
     std.debug.print(randomArray);
     try std.testing.expect(true);
 }
