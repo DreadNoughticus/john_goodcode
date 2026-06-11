@@ -12,6 +12,7 @@ jobs:
       - name: Install zig
         run: |
           curl https://www.zvm.app/install.sh
+          source /home/runner/.bashrc
           zvm i master
 
       - name: Check out repo code
