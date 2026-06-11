@@ -3,11 +3,11 @@ when:
     branch: main
 
 steps:
-  # - name: format
-  #   image: ziglings/ziglang
-  #   commands:
-  #     - echo "Formatting code"
-  #     - zig fmt .
+  - name: format
+    image: ziglings/ziglang
+    commands:
+      - echo "Formatting code"
+      - zig fmt .
 
   - name: test
     image: ziglings/ziglang

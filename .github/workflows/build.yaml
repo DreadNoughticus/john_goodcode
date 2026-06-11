@@ -1,0 +1,31 @@
+name: Zig CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  zig-ci:
+    runs-on: ubuntu-latest-1cpu
+    container:
+      image: ziglings/ziglang
+
+    steps:
+      - name: Check out repo code
+        uses: actions/checkout@v4
+
+      - name: format
+        run: |
+          echo "Formatting code"
+          zig fmt .
+
+      - name: test
+        run: |
+          echo "Running tests"
+          zig build test
+
+      - name: build
+        run: |
+          echo "Starting build"
+          zig build
