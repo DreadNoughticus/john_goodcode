@@ -8,10 +8,10 @@ on:
 jobs:
   zig-ci:
     runs-on: ubuntu-latest
-    container:
-      image: ziglings/ziglang
-
     steps:
+      - name: Install zig
+        run: curl https://www.zvm.app/install.sh | bash
+
       - name: Check out repo code
         uses: actions/checkout@v4
 
