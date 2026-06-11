@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install zig
-        run: curl https://www.zvm.app/install.sh | bash
+        run: |
+          curl https://www.zvm.app/install.sh
+          zvm i master
 
       - name: Check out repo code
         uses: actions/checkout@v4
